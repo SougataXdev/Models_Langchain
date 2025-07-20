@@ -6,6 +6,21 @@ embedding = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L
 text = "kolkata is the capital of wb"
 
 
-res = embedding.embed_query(text=text)
+# res = embedding.embed_query(text=text)
+
+# print(str(res))
+
+
+# how to embedd documents
+
+
+document = [
+    "i am sougata",
+    "he is a doctor"
+]
+
+
+res = embedding.embed_documents(document)
+
 
 print(str(res))
